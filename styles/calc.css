@@ -1,0 +1,21 @@
+.calc-container {
+    width: 450px;
+    margin: auto;
+    background-color: #ccc;
+    padding: 10px;
+}
+
+.calc-screen {
+    width: 400px;
+    border: none;
+    padding: 10px;
+    font-family: 'Courier New';
+    text-align: right
+}
+
+.calc-digit {
+    width: 100px;
+    height: 70px;
+    font-size: 40px;
+    margin: 10px;
+}

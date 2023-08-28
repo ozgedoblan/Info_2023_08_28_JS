@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/styles/main.css" rel="stylesheet" />
+    <link href="/styles/tools.css" rel="stylesheet" />
+    <link href="/styles/calc.css" rel="stylesheet" />
+    <script src="/scripts/jquery-3.7.0.js"></script>
+    <script>
+        $(function () {
+            var scrn = $("#txt-screen");
+
+            for (var i = 1; i <= 10; i++) {
+                $("<button></button>")
+                    .text(i % 10)
+                    .addClass("calc-digit")
+                    .click(
+                        function () {
+                            var digit = $(this).text();
+                            var value = scrn.val();
+                            if (value != "0")
+                                scrn.val(value + digit);
+                            else
+                                scrn.val(digit);                         
+                        })
+                    .appendTo(".calc-buttons-container");
+            }
+            $("#btn-clear").click(function () {
+                scrn.val("0");
+            })
+          
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>JQuery : Hesap Makinasi</h1>
+    </div>
+    <div class="calc-container">
+        <input type="text" id="txt-screen" class="calc-screen"
+               readonly />
+        <div class="calc-buttons-container">
+            <button id="btn-clear" class="calc-digit"
+                    style="background-color:#800000">
+                C
+            </button>
+        </div>
+    </div>
+</body>
+</html>

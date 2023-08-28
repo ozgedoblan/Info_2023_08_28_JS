@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="styles/main.css" rel="stylesheet" />
+    <link href="styles/tools.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+    <style>
+        .dv {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #666
+        }
+    </style>
+    <script>
+        function buttonClick1() {
+            var txt = $("#dv1").html();
+            alert(txt);
+        }
+        function buttonClick2() {
+            console.log($(".dv").length, "tane div elementi var");
+            $(".dv").addClass("txt-red");
+        }
+        $(function () {
+            $("#dv2").addClass("bg-blue");
+            $("button")
+
+                .click(
+                    function () {
+                        $(".dv").addClass("bg-green");
+                    })
+                .mouseenter(
+                    function () {
+                        $(this).addClass("bg-red");
+                    })
+                .mouseleave(
+                    function () {
+                        $(this).removeClass("bg-red");
+                    });
+
+            $(".dv").click(
+                function () {
+                    $(this).hide(500);
+                });
+
+            $("#btn4").click
+                (
+                    function () {
+                        $(".dv").fadeIn(300);
+                    }
+                )
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>JQuery</h1>
+        <div class="dv" id="dv1">Abc 123</div>
+        <div class="dv" id="dv2">Abc 123</div>
+        <div class="dv" id="dv3">Abc 123</div>
+        <div class="dv" id="dv4">Abc 123</div>
+        <button onclick="buttonClick1()">button1</button>
+        <button onclick="buttonClick2()">button2</button>
+        <button id="btn3">button3</button>
+        <button id="btn4">button4</button>
+
+    </div>
+</body>
+</html>

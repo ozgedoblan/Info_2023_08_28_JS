@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hi JQuery</title>
+    <link href="styles/main.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.7.0.js"></script>
+    <script>
+        function selam() {
+            var txt = $("#txt_adi").val();
+            alert(txt);
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            var txt = $("#txt_adi").val();
+            alert("selam " + txt + " sayfa hazir");
+        });
+
+        $(function () {
+            alert("sayfa gerçekten hazir");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi JQuery</h1>
+        <input id="txt_adi" type="text" placeholder="adiniz..." value="lizge" />
+        <hr />
+        <button onclick="selam()">Go</button>
+    </div>
+
+</body>
+</html>
